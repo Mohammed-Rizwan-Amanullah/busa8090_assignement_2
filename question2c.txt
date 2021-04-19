@@ -1,0 +1,6 @@
+USE compbiol
+
+SELECT LastName, FirstName, m.MemberID
+FROM Member m
+JOIN Entry E on m.MemberID = E.MemberID
+WHERE Year <> 2013;

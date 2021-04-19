@@ -1,0 +1,7 @@
+USE compbiol
+
+SELECT metabolism,
+COUNT(*) occurences
+FROM annotation
+GROUP BY metabolism
+HAVING occurences > 1;

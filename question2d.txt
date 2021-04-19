@@ -1,0 +1,7 @@
+USE compbiol
+
+Select distinct m.LastName, m.FirstName, m.MemberID
+from Entry e join Member m on e.MemberID = m.MemberID
+Where exists (Select * from Entry e where m.MemberID=e.MemberID AND e.Year=2013)
+AND exists (Select * from Entry e where m.MemberID=e.MemberID AND e.Year=2014)
+AND exists (Select * from Entry e where m.MemberID=e.MemberID AND e.Year=2015);

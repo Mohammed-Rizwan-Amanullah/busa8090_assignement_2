@@ -1,0 +1,5 @@
+USE compbiol
+
+SELECT LastName, FirstName, MemberID
+FROM Member
+WHERE JoinDate BETWEEN '2013-01-01' AND '2013-12-31';
